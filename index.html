@@ -9,6 +9,15 @@
       gtag('js', new Date());
 
       gtag('config', 'G-Q6PYXJFR8T');
+      
+      // 測試事件：頁面載入完成
+      window.addEventListener('load', function() {
+        gtag('event', 'page_view_complete', {
+          'event_category': 'engagement',
+          'event_label': 'workshop_landing_page',
+          'custom_parameter': 'obsidian_ai_workshop'
+        });
+      });
     </script>
     
     <!-- Google Tag Manager -->
@@ -96,7 +105,7 @@
             <h2>我只是想把自己的資料蒐集起來<br>讓<span class="highlight">AI幫我分析自己</span><br>結果發現這方法還蠻實用的</h2>
             
             <div class="hero-cta">
-                <a href="#why-this-works" class="cta-btn explore">了解這個方法</a>
+                <a href="#why-this-works" class="cta-btn explore" onclick="trackExploreClick()">了解這個方法</a>
             </div>
         </div>
     </header>
@@ -412,8 +421,36 @@
     <!-- ====== Footer End ====== -->
     
     <script>
+        // GA4 事件追蹤函數
+        function trackExploreClick() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'click', {
+                    'event_category': 'engagement',
+                    'event_label': 'explore_method_cta',
+                    'custom_parameter': 'hero_section_cta'
+                });
+            }
+        }
+        
         // 付款函數
         function openPayment() {
+            // GA4 轉換追蹤
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'begin_checkout', {
+                    'event_category': 'ecommerce',
+                    'event_label': 'obsidian_ai_workshop',
+                    'currency': 'TWD',
+                    'value': 1200,
+                    'items': [{
+                        'item_id': 'obsidian-ai-workshop',
+                        'item_name': 'Obsidian AI筆記術工作坊',
+                        'category': '線上工作坊',
+                        'quantity': 1,
+                        'price': 1200
+                    }]
+                });
+            }
+            
             // 開啟付款視窗
             const paymentWindow = window.open(
                 'https://api.payuni.com.tw/api/su/store_info/AJAJ1751374909/pc6IZKLZWL8KVNWqvzYH',
