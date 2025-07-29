@@ -298,6 +298,44 @@ p {
     opacity: 0.8;
 }
 
+/* Hero區塊專用的探索按鈕 */
+.cta-btn.explore {
+    background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+    color: var(--dark-color);
+    border: 2px solid var(--accent-color);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.2);
+}
+
+.cta-btn.explore::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s;
+}
+
+.cta-btn.explore:hover::before {
+    left: 100%;
+}
+
+.cta-btn.explore:hover {
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    color: white;
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(249, 115, 22, 0.4);
+    border-color: var(--primary-color);
+}
+
+.cta-btn.explore:active {
+    transform: translateY(-2px) scale(1.01);
+    transition: transform 0.1s;
+}
+
 /* 區塊樣式系統 */
 section {
     position: relative;
@@ -905,50 +943,124 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .navbar ul {
-        display: none;
+    .container {
+        padding: 0 var(--space-3);
     }
     
-    .hero-badge {
-        transform: none;
-        font-size: var(--font-size-xs);
-        padding: var(--space-2) var(--space-4);
+    .hero-section {
+        padding: var(--space-12) 0 var(--space-8) 0;
+        min-height: 70vh;
     }
     
-    .pain-item {
-        padding: var(--space-8);
+    .hero-section h1 {
+        font-size: var(--font-size-2xl);
+        line-height: 1.3;
     }
     
-    .module-header {
-        flex-direction: column;
-        gap: var(--space-4);
-        text-align: center;
+    .hero-section h2 {
+        font-size: var(--font-size-lg);
+        line-height: 1.4;
+    }
+    
+    /* 減少手機版的區塊間距，避免過長 */
+    section {
+        margin-bottom: var(--space-6);
+    }
+    
+    .pain-resonance,
+    .pain-points,
+    .solution,
+    .course-content,
+    .instructor,
+    .faq,
+    .final-cta {
+        padding: var(--space-16) 0;
+        margin-top: var(--space-8);
     }
     
     .cta-btn {
         min-width: 250px;
+        padding: var(--space-4) var(--space-6);
+        font-size: var(--font-size-sm);
+    }
+    
+    .cta-btn.huge {
+        min-width: 280px;
+        padding: var(--space-6) var(--space-8);
+        font-size: var(--font-size-base);
+    }
+    
+    .pain-grid {
+        gap: var(--space-6);
+    }
+    
+    .pain-item h3 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .pain-item p {
+        font-size: var(--font-size-sm);
+    }
+    
+    .solution-preview {
+        padding: var(--space-8);
+        margin-top: var(--space-12);
+    }
+    
+    .hero-badge {
+        font-size: var(--font-size-xs);
+        padding: var(--space-2) var(--space-4);
+        margin-bottom: var(--space-6);
+    }
+    
+    .benefit-list {
+        gap: var(--space-4);
+    }
+    
+    .module {
+        margin-bottom: var(--space-8);
     }
     
     .instructor-avatar {
-        font-size: 4rem;
+        font-size: 3rem;
+        margin-bottom: var(--space-6);
+    }
+    
+    .instructor-story p {
+        font-size: var(--font-size-sm);
+        line-height: 1.6;
+    }
+    
+    .faq-item {
+        margin-bottom: var(--space-6);
+    }
+    
+    .navbar ul {
+        gap: var(--space-4);
+    }
+    
+    .navbar ul li a {
+        font-size: var(--font-size-sm);
+        padding: var(--space-2) var(--space-3);
     }
 }
 
-/* 其他優化 */
-.highlight {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+/* 可訪問性與無障礙設計 */
+.cta-btn:focus,
+.navbar a:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-::selection {
-    background: rgba(249, 115, 22, 0.2);
-    color: var(--dark-color);
+/* 減少動畫效果於偏好設定 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* 焦點狀態 */
@@ -987,3 +1099,8 @@ html {
 .benefit-item:nth-child(3) { animation-delay: 0.2s; }
 .benefit-item:nth-child(4) { animation-delay: 0.3s; }
 .benefit-item:nth-child(5) { animation-delay: 0.4s; }
+
+/* 痛點共鳴區塊間距調整 */
+.pain-resonance {
+    margin-top: var(--space-24);  /* 增加上邊距，與Hero區塊拉開距離 */
+}
