@@ -175,7 +175,7 @@ p {
 
 /* 導覽列報名按鈕 */
 .nav-cta-btn {
-    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     color: white;
     border: none;
     padding: var(--space-3) var(--space-6);
@@ -188,7 +188,7 @@ p {
 }
 
 .nav-cta-btn:hover {
-    background: var(--primary-dark);
+    background: linear-gradient(135deg, var(--primary-hover), var(--primary-color));
     transform: translateY(-1px);
     box-shadow: var(--shadow-md);
 }
