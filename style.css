@@ -173,6 +173,26 @@ p {
     background: rgba(249, 115, 22, 0.1);
 }
 
+/* 導覽列報名按鈕 */
+.nav-cta-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-cta-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
 /* 現代Hero區塊 */
 .hero-section {
     background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
