@@ -3,194 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文科橘貓的AI工作室</title>
-    <meta name="description" content="我是文科橘貓，一個專注於社會學思維的AI賦能顧問。我幫助在AI洪流中感到焦慮的知識工作者，透過真實洞察與AI協作，建立屬於自己的一人公司系統，過上更清醒明智的人生。">
-    <meta name="keywords" content="AI賦能, 一人公司, 社會學, 知識管理, 個人品牌, 文科橘貓">
+    <title>Obsidian AI筆記術工作坊 - 文科橘貓</title>
+    <meta name="description" content="我因為處理C-PTSD而摸索出的Obsidian AI筆記方法。2小時教你把手機變成最懂你的朋友，用AI分析自己的思緒和對話記錄。">
+    <meta name="keywords" content="Obsidian, AI筆記, 知識管理, 個人成長, AI分身, Smart Composer, Gemini, 文科橘貓">
     <meta name="author" content="文科橘貓">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="文科橘貓的AI工作室">
-    <meta property="og:description" content="探索如何以社會學思維，打造AI賦能的一人公司系統。">
-    <meta property="og:image" content="https://raw.githubusercontent.com/catsoc/demo_website/main/og-image.jpg">
-    <meta property="og:url" content="https://catsoc.github.io/demo_website/">
+    <meta property="og:title" content="Obsidian AI筆記術工作坊 - 連貓咪都能學會">
+    <meta property="og:description" content="我因為處理C-PTSD而摸索出的方法，教你用AI分析自己的思緒和對話記錄。">
+    <meta property="og:image" content="https://raw.githubusercontent.com/catsoc/demo-website/main/og-image.jpg">
+    <meta property="og:url" content="https://catsoc.github.io/demo-website/">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="文科橘貓的AI工作室">
-    <meta name="twitter:description" content="探索如何以社會學思維，打造AI賦能的一人公司系統。">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/catsoc/demo_website/main/og-image.jpg">
+    <meta name="twitter:title" content="Obsidian AI筆記術工作坊 - 連貓咪都能學會">
+    <meta name="twitter:description" content="我因為處理C-PTSD而摸索出的方法，教你用AI分析自己的思緒和對話記錄。">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/catsoc/demo-website/main/og-image.jpg">
 
-    <style>
-        :root {
-            --primary-color: #F97316;
-            --secondary-color: #FB923C;
-            --dark-color: #333;
-            --light-color: #f4f4f4;
-            --white-color: #fff;
-            --font-family: 'Noto Sans TC', sans-serif;
-        }
-        body {
-            font-family: var(--font-family);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: var(--light-color);
-            color: var(--dark-color);
-        }
-        .container {
-            max-width: 960px;
-            margin: auto;
-            overflow: hidden;
-            padding: 0 2rem;
-        }
-        /* Orange navbar */
-        .navbar {
-            background: var(--primary-color);
-            color: var(--white-color);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .navbar .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--white-color);
-            text-decoration: none;
-        }
-        .navbar ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar ul li {
-            margin-left: 20px;
-        }
-        .navbar ul li a {
-            color: var(--white-color);
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        .navbar ul li a:hover {
-            color: var(--dark-color);
-        }
-        header {
-            background: var(--secondary-color);
-            color: var(--white-color);
-            padding: 4rem 0;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
-        header p {
-            font-size: 1.2rem;
-        }
-        section {
-            padding: 2rem 0;
-        }
-        .service-card {
-            background: var(--white-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .cta-btn {
-            display: inline-block;
-            background: var(--primary-color);
-            color: var(--white-color);
-            padding: 0.75rem 2rem;
-            border-radius: 4px;
-            font-weight: bold;
-            text-decoration: none;
-            margin-top: 1rem;
-        }
-        footer {
-            background: var(--dark-color);
-            color: var(--white-color);
-            text-align: center;
-            padding: 2rem 0;
-        }
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.5rem; }
-            .navbar .container { flex-direction: column; }
-            .navbar ul { margin-top: 1rem; }
-        }
-    </style>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- 外部樣式表分離，提升可維護性與模組化 -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- ====== Navbar Start ====== -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">文科橘貓</a>
+            <a href="#" class="logo">🐱🐱 文科橘貓</a>
             <ul>
-                <li><a href="#services">核心服務</a></li>
-                <li><a href="#about">關於我</a></li>
-                <li><a href="#contact">與我聯繫</a></li>
+                <li><a href="#course">課程內容</a></li>
             </ul>
         </div>
     </nav>
-    <header>
+    <!-- ====== Navbar End ====== -->
+
+    <!-- ====== Hero Section Start ====== -->
+    <header class="hero-section">
         <div class="container">
-            <h1>文科橘貓的AI工作室</h1>
-            <p>以社會學思維，打造AI賦能的一人公司系統</p>
+            <div class="hero-badge">我不是什麼知識管理專家</div>
+            <h1>我只是想把自己的資料蒐集起來<br>讓<span class="highlight">AI幫我分析自己</span><br>結果發現這方法還蠻實用的</h1>
+            <p class="hero-subtitle">我因為處理自己的C-PTSD而摸索出這套方法<br>原來把自己記下來讓AI分析，比那些花俏的知識管理系統還實用</p>
+            
+            <div class="hero-cta">
+                <button onclick="openPayment()" class="cta-btn primary">早鳥價 NT$1,200（原價 NT$3,600）</button>
+                <p class="guarantee-note">手機變身AI協作站 | 不浮誇只實用</p>
+            </div>
         </div>
     </header>
-    <main class="container">
-        <section id="hero">
-            <h2>AI賦能 × 真實洞察，打造屬於你的清醒人生</h2>
-            <p>專為渴望深度、真誠、批判性思考的知識工作者設計。以社會學視角結合AI工具，陪你穿越資訊迷霧，重塑自我敘事與行動力。</p>
-            <a href="#contact" class="cta-btn">立即預約諮詢</a>
-        </section>
-        <section id="services">
-            <h2>核心服務</h2>
-            <div class="service-card">
-                <h3>AI 賦能雙引擎</h3>
-                <p>釐清個人願景與商業模式，導入AI工具，讓你的效率倍增，專注於最有價值的事務。</p>
+    <!-- ====== Hero Section End ====== -->
+
+    <main>
+        <!-- ====== 工作坊內容區塊 Start ====== -->
+        <section class="pain-points">
+            <div class="container">
+                <h2>這個工作坊要教你什麼？</h2>
+                <p class="pain-intro">很簡單，就是讓你的手機變成你最懂你的朋友</p>
+                
+                <div class="pain-grid">
+                    <div class="pain-item">
+                        <div class="pain-icon">📱</div>
+                        <h3>1. 手機變身隨身AI協作站（30分鐘）</h3>
+                        <p>手機版Obsidian + Google Drive雲端同步<br>Smart Composer AI插件（免費Google AI）<br>一鍵啟動的靈感記錄系統</p>
+                    </div>
+                    <div class="pain-item">
+                        <div class="pain-icon">🧠</div>
+                        <h3>2. 日常資料變成個人智慧庫（60分鐘）</h3>
+                        <p>錄音轉文字、LINE對話導入、PDF快速整理<br>所有資料統一管理，AI幫你分析</p>
+                    </div>
+                    <div class="pain-item">
+                        <div class="pain-icon">🤖</div>
+                        <h3>3. AI當你的24小時分析師（30分鐘）</h3>
+                        <p>從對話記錄中發現隱藏的價值觀<br>AI指出你的強項和需要成長的地方</p>
+                    </div>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>AI 賦能加速器</h3>
-                <p>整合AI應用，深化個人系統，打造屬於你的知識管理與自動化工作流。</p>
+        </section>
+
+        <!-- ====== 解決方案區塊 Start ====== -->
+        <section class="solution">
+            <div class="container">
+                <h2>我是怎麼從一團混亂中找到這個方法的</h2>
+                <div class="solution-content">
+                    <div class="solution-text">
+                        <h3>其實我一開始也不知道<span class="highlight">Obsidian+AI</span>有什麼用</h3>
+                        <div class="benefit-list">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🤖</span>
+                                <div>
+                                    <strong>最簡單的AI搭配：Smart Composer + Gemini</strong>
+                                    <p>不用花錢，不用學程式，兩個步驟就設定好</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">💬</span>
+                                <div>
+                                    <strong>和你的筆記聊天</strong>
+                                    <p>就像有個朋友在旁邊，隨時能幫你整理思緒</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🧠</span>
+                                <div>
+                                    <strong>用社會學的角度看自己</strong>
+                                    <p>不是心靈雞湯，是有架構的自我理解</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🔗</span>
+                                <div>
+                                    <strong>讓AI幫你發現你沒注意到的事</strong>
+                                    <p>原來以前寫的東西之間有這些關聯！</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🪞</span>
+                                <div>
+                                    <strong>最奇妙的功能：AI變成你</strong>
+                                    <p>跟自己對話，然後突然明白一些事情</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="unique-value">
+                            <h4>🌟 坦白說：</h4>
+                            <p><strong>我不是什麼技術專家，也不是什麼筆記達人</strong></p>
+                            <p>我只是一個人，想要認真面對自己的混亂，然後摸索出了這個方法</p>
+                        </div>
+                    </div>
+                    <div class="solution-visual">
+                        <div class="process-flow">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <h4>2分鐘設定</h4>
+                                <p>快速安裝配置</p>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <h4>AI深度對話</h4>
+                                <p>與知識庫互動</p>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <h4>洞察突破</h4>
+                                <p>系統性釐清思維</p>
+                            </div>
+                        </div>
+                        
+                        <div class="solution-cta">
+                            <button onclick="openPayment()" class="cta-btn secondary">💡 早鳥價 NT$1,200（原價 NT$3,600）</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>AI 協作領航者計畫</h3>
-                <p>一對一深度協作，共創你的AI分身與個人品牌藍圖，實現真實人生轉型。</p>
+        </section>
+
+        <!-- ====== 課程內容區塊 Start ====== -->
+        <section id="course" class="course-content">
+            <div class="container">
+                <h2>2小時學會什麼？</h2>
+                <div class="course-overview">
+                    <div class="overview-card">
+                        <h3>🎯 懶人知識管理</h3>
+                        <p>隨手存，立即找 - 用AI把日常資訊變成個人智慧資產</p>
+                    </div>
+                </div>
+                
+                <div class="course-modules">
+                    <div class="module">
+                        <div class="module-header">
+                            <h3>📱 第1小時：手機變身AI協作站</h3>
+                            <span class="duration">實作教學</span>
+                        </div>
+                        <div class="module-content">
+                            <div class="lesson-grid">
+                                <div class="lesson-item">
+                                    <h4>🔧 基本設定</h4>
+                                    <p>Obsidian + Google AI + 雲端同步</p>
+                                </div>
+                                <div class="lesson-item">
+                                    <h4>💬 對話分析</h4>
+                                    <p>LINE聊天記錄導入與AI分析</p>
+                                </div>
+                                <div class="lesson-item">
+                                    <h4>📄 資料整理</h4>
+                                    <p>錄音轉文字 + PDF快速處理</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="module">
+                        <div class="module-header">
+                            <h3>🤖 第2小時：AI當你的分析師</h3>
+                            <span class="duration">QA + 個人化</span>
+                        </div>
+                        <div class="module-content">
+                            <ul class="simple-list">
+                                <li>從對話中發現隱藏的價值觀模式</li>
+                                <li>AI指出你的溝通風格和成長方向</li>
+                                <li>疑難排解 + 個人化建議</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-bonus">
+                    <h3>🎁 課後資源</h3>
+                    <div class="bonus-simple">
+                        <span>設定檢查清單</span>
+                        <span>常用模板包</span>
+                        <span>學員群組</span>
+                        <span>30天支援</span>
+                    </div>
+                </div>
             </div>
         </section>
-        <section id="about">
-            <h2>關於我</h2>
-            <p>我是文科橘貓，一個專注於社會學思維的AI賦能顧問。我的使命是幫助在AI洪流中感到焦慮的知識工作者，透過真實洞察與AI協作，建立屬於自己的一人公司系統，過上更清醒明智的人生。</p>
-            <ul>
-                <li>目標受眾：聰明敏感、渴望深度連結、批判性思考者</li>
-                <li>價值觀：反剝削、賦能獨立、真誠陪伴</li>
-                <li>專長：AI應用策略、知識管理、個人成長系統設計</li>
-            </ul>
+
+        <!-- ====== 講師介紹區塊 Start ====== -->
+        <section class="instructor">
+            <div class="container">
+                <h2>關於我</h2>
+                <div class="instructor-content">
+                    <div class="instructor-avatar">🐱</div>
+                    <div class="instructor-text">
+                        <h3>文科橘貓</h3>
+                        <p class="instructor-subtitle">一個正在處理CPTSD的普通人</p>
+                        <div class="instructor-story">
+                            <p>我不是專家，只是因為想整理自己混亂的內心世界，意外發現了這套方法。</p>
+                            <p>當AI開始理解我的筆記，比任何諮商都還有效。現在想把這個土法煉鋼的過程分享給同樣困惑的人。</p>
+                        </div>
+                        <blockquote class="instructor-quote">
+                            "我們都在摸索，但不需要一個人走完全程。"
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="contact">
-            <h2>與我聯繫</h2>
-            <p>準備好開啟你的AI賦能之旅了嗎？</p>
-            <p>信箱：<a href="mailto:catsoc.org@gmail.com">catsoc.org@gmail.com</a></p>
-            <p>或直接填寫<a href="mailto:catsoc.org@gmail.com?subject=預約諮詢">預約諮詢表單</a></p>
+
+        <!-- ====== FAQ區塊 Start ====== -->
+        <section class="faq">
+            <div class="container">
+                <h2>常見問題</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>Q: 完全沒經驗會跟不上嗎？</h3>
+                        <p>A: 我當初也是零基礎，會從最簡單的開始教。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: 使用AI會很貴嗎？</h3>
+                        <p>A: Gemini免費額度就夠用，課程教你省錢方法。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: 是直播還是錄影？</h3>
+                        <p>A: 全部錄影，可重複觀看，按自己節奏學習。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: 卡住了怎麼辦？</h3>
+                        <p>A: 有30天諮詢支援，不會讓你一個人面對問題。</p>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <!-- ====== 最終行動區塊 Start ====== -->
+        <section class="final-cta">
+            <div class="container">
+                <h2>如果你也想開始整理自己的世界</h2>
+                <p class="final-cta-text">
+                    我知道一個人摸索很累，也知道一次又一次失敗的挫折感。<br>
+                    <strong>這套方法不是什麼神奇魔法，只是我在處理自己混亂思緒時發現的實用工具。</strong><br>
+                    如果你也有類似的需求，或許我的經驗能幫你少走一些彎路。
+                </p>
+                
+                <div class="final-cta-action">
+                    <button onclick="openPayment()" class="cta-btn primary huge">
+                        早鳥價 NT$1,200（原價 NT$3,600）
+                    </button>
+                    <p class="final-note">7天內不滿意可退費</p>
+                </div>
+                
+                <div class="final-ps">
+                    <p>我不會告訴你這會改變你的人生，因為我討厭誇張的承諾。<br>但我可以告訴你，這套方法確實讓我的思緒變得比較清楚，也希望能對你有所幫助。</p>
+                </div>
+            </div>
+        </section>
+
+
     </main>
+    <!-- ====== Footer Start ====== -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 文科橘貓的AI工作室. All Rights Reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🐱 文科橘貓 AI工作坊</h4>
+                    <p>專業的 Obsidian AI 筆記術教學<br>讓每個人都能擁有專屬的 AI 思考夥伴</p>
+                </div>
+                <div class="footer-section">
+                    <h4>聯絡資訊</h4>
+                    <p>📧 聯絡信箱：catsoc.org [ @ ] gmail.com</p>
+                    <p>📱 <a href="https://www.instagram.com/cat__soc/" target="_blank">Instagram: @cat__soc</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>購買須知</h4>
+                    <p>本課程為數位內容，購買後不可退換</p>
+                    <p>但提供7天滿意保證，不滿意全額退費</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 文科橘貓 AI工作室 | 版權所有</p>
+            </div>
         </div>
     </footer>
+    <!-- ====== Footer End ====== -->
+    
+    <script>
+        // 付款函數
+        function openPayment() {
+            // 開啟付款視窗
+            const paymentWindow = window.open(
+                'https://api.payuni.com.tw/api/su/store_info/AJAJ1751374909/pc6IZKLZWL8KVNWqvzYH',
+                'paymentWindow',
+                'width=800,height=600,scrollbars=yes,resizable=yes'
+            );
+        }
+        
+        // 平滑滾動
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 導航列滾動效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 載入動畫優化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 為進入視窗的元素添加動畫
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, observerOptions);
+
+            // 觀察需要動畫的元素
+            document.querySelectorAll('.pain-item, .benefit-item, .module').forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+        });
+    </script>
+    
+    <!-- 維護說明：本網站結構已分層、加註解，樣式分離於 style.css，便於日後擴充與模組化。 -->
 </body>
 </html>
