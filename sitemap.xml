@@ -6,4 +6,10 @@
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
+    <url>
+        <loc>https://catsoc.github.io/demo_website/og-image.html</loc>
+        <lastmod>2025-08-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
 </urlset>

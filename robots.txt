@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
 
+# 主要內容
+Allow: /index.html
+Allow: /style.css
+Allow: /og-image.html
+
+# 限制爬蟲
+Disallow: /.git/
+Disallow: /README.md
+
+# Sitemap 位置
 Sitemap: https://catsoc.github.io/demo_website/sitemap.xml
+
+# 爬蟲延遲
+Crawl-delay: 1
