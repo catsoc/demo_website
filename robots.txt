@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://demo-website.pages.dev/sitemap.xml
+Sitemap: https://catsoc.github.io/demo_website/sitemap.xml
