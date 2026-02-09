@@ -1,0 +1,23 @@
+
+🔧 Google Search Console 設定步驟:
+
+1. **新增資源**
+   - 選擇「網址前置字元」
+   - 輸入: https://catsoc.github.io/demo_website/
+   
+2. **驗證所有權** (選擇任一方法)
+   - HTML 檔案: 上傳 google-verification.html
+   - HTML 標籤: 添加到網站 <head> 區域
+   - DNS 記錄: 在 DNS 設定中添加 TXT 記錄
+   
+3. **提交 Sitemap**
+   - 到 Sitemap 區域
+   - 新增 sitemap: sitemap.xml
+   - 完整網址: https://catsoc.github.io/demo_website/sitemap.xml
+   
+4. **請求索引**
+   - 到網址檢測工具
+   - 輸入首頁網址: https://catsoc.github.io/demo_website/
+   - 點擊「請求索引」
+
+✅ 完成後等待 1-2 週Google 處理
